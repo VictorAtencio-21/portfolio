@@ -157,3 +157,16 @@
     transform: rotate(0deg);
   }
 }
+
+html {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+} /* Firefox */
+body {
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+} /* IE and Edge */
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-button {
+  display: none;
+} /* Chrome */

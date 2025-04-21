@@ -33,7 +33,6 @@ export default function RootLayout({
         <BackgroundCanvas />
         <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );

@@ -3,15 +3,10 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center">
-      {/* Title Section */}
-      <section className="w-full mx-auto">
-        <h1 className="text-5xl font-bold text-white">About Me</h1>
-      </section>
-
-      <section className="w-full mx-auto py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="w-full max-w-7xl flex flex-col items-center justify-center">
+      <section className="w-full py-6 grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Intro Card */}
-        <div className="p-6 rounded-2xl shadow-md bg-black/20 backdrop-blur-lg">
+        <div className="rounded-lg backdrop-blur-lg">
           <h2 className="text-white text-xl font-semibold mb-2">
             Let me introduce myself
           </h2>
@@ -23,7 +18,7 @@ export default function About() {
           </p>
         </div>
         {/* Passion Card (full width) */}
-        <div className="p-6 rounded-2xl shadow-md bg-black/20 backdrop-blur-lg">
+        <div className="rounded-lg backdrop-blur-lg">
           <h2 className="text-white text-xl font-semibold mb-2">
             My Passion for Coding
           </h2>
@@ -37,7 +32,7 @@ export default function About() {
         </div>
 
         {/* Location Card */}
-        <div className="p-6 rounded-2xl shadow-md flex flex-col justify-between bg-black/20 backdrop-blur-lg">
+        <div className="rounded-lg flex flex-col justify-between backdrop-blur-lg">
           <div>
             <h2 className="text-white text-xl font-semibold mb-2">
               Remote & Flexible
@@ -49,8 +44,9 @@ export default function About() {
           </div>
           <a
             href="mailto:atenciomvictor@gmail.com"
-            className="bg-green-600 text-white text-sm font-medium px-4 py-2 rounded-lg text-center hover:bg-green-500 transition"
+            className="bg-[#60a5fa] text-white text-sm font-medium px-4 py-2 rounded-lg text-center hover:bg-[#3b82f6] transition"
           >
+            <MailIcon className="inline-block mr-2" size={16} />
             Contact Me
           </a>
         </div>

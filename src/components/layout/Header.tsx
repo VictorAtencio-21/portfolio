@@ -13,23 +13,16 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-lg">
+      <header className="fixed top-0 left-0 right-0 z-50">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between p-4 sm:p-2 lg:p-4">
-            <Link
-              href="/"
-              className="text-2xl font-bold text-white hover:text-white transition-colors"
-            >
-              Victor Atencio
-            </Link>
-
+          <div className="flex items-center justify-end p-3">
             <Button
               variant="ghost"
-              size="icon"
-              className="hover:bg-neutral-800/50 transition-colors"
+              className="backdrop-blur-md hover:bg-neutral-800/50 transition-colors"
+              size={"lg"}
               onClick={() => setIsOpen(!isOpen)}
             >
-              <Menu size={48} color="#fff" className="h-12 w-12"/>
+              <Menu size={48} color="#fff" className="h-24 w-24"/>
             </Button>
           </div>
         </div>

@@ -3,9 +3,9 @@ import React from "react";
 
 const Main = () => {
   return (
-    <div className="flex flex-col gap-4 items-center justify-center w-full">
+    <div className="flex flex-col gap-4 items-center justify-center max-w-7xl">
       <h1 className="text-2xl sm:text-5xl font-bold tracking-[-.01em] text-start sm:text-left">
-        Hi there, I’m Victor{" "} 
+        Hi there, I’m Victor{" "}
         <span className="waving-hand">
           <Image
             src="/waving-hand.svg"
