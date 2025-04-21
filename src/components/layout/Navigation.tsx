@@ -22,7 +22,7 @@ const Navigation = ({
       animate="enter"
       exit="exit"
       initial="initial"
-      className="fixed top-0 right-0 z-50 w-80 h-screen bg-black text-white px-4"
+      className="fixed top-0 right-0 z-50 w-80 h-screen bg-black/20 backdrop-blur-md text-white px-4"
     >
       <div className="flex flex-col items-start justify-center p-8 h-full">
         <div className="text-sm font-semibold text-neutral-400 border-b-2 border-gray-700 w-full">
