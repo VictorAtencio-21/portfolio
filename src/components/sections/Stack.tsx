@@ -97,11 +97,6 @@ const Stack = () => {
 
   return (
     <div className="max-w-7xl flex flex-col items-center justify-center">
-      {/* Title Section */}
-      <section className="w-full">
-        <h1 className="text-2xl text-white">My Stack</h1>
-      </section>
-
       <section className="w-full flex flex-col space-y-4">
         {Object.keys(techStack).map((category) => (
           <div key={category} className="py-4 grid grid-cols-1 sm:grid-cols-3">

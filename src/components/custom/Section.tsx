@@ -46,14 +46,17 @@ const Section: React.FC<SectionProps> = ({
     <section
       {...props}
       ref={container}
-      className="max-w-7xl min-h-[70vh] w-full flex items-center justify-center snap-start px-4"
+      className="max-w-7xl w-full flex items-center justify-center snap-start px-4"
       id={section.title}
     >
-      {children || (
-        <div className="max-w-7xl flex flex-col items-center justify-center">
-          <h1 className="text-2xl text-white">{section.title}</h1>
-        </div>
-      )}
+      <div className="w-full max-w-7xl flex flex-col gap-2 items-center justify-center">
+        <section className="w-full mx-auto">
+          <h1 className="text-2xl text-neutral-400">
+            {section.title.toUpperCase()}
+          </h1>
+        </section>
+        {children}
+      </div>
     </section>
   );
 };
