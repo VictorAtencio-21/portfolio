@@ -46,15 +46,15 @@ const Section: React.FC<SectionProps> = ({
     <section
       {...props}
       ref={container}
-      className="max-w-7xl w-full flex items-center justify-center snap-start px-4"
-      id={section.title}
+      /* exactly 100 vh, centres the content, snaps into place */
+      className="h-screen w-full flex items-center justify-center snap-start px-4"
+      id={section.title || undefined}
     >
+      {/* your inner wrapper stays the same */}
       <div className="w-full max-w-7xl flex flex-col gap-2 items-center justify-center">
-        <section className="w-full mx-auto">
-          <h1 className="text-2xl text-neutral-400">
-            {section.title.toUpperCase()}
-          </h1>
-        </section>
+        {section.title && (
+          <h1 className="w-full text-2xl text-neutral-400">{section.title}</h1>
+        )}
         {children}
       </div>
     </section>
