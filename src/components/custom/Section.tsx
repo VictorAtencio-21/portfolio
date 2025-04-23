@@ -48,7 +48,7 @@ const Section: React.FC<SectionProps> = ({
       ref={container}
       /* exactly 100 vh, centres the content, snaps into place */
       className="h-screen w-full flex items-center justify-center snap-start px-4"
-      id={section.title || undefined}
+      id={`section-${section.positionId}`}
     >
       {/* your inner wrapper stays the same */}
       <div className="w-full max-w-7xl flex flex-col gap-2 items-center justify-center">

@@ -11,10 +11,11 @@ const Navigation = ({
 }) => {
   // Side bar navigation menu
   const Links = [
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Tech Stack", href: "#stack" },
-    { name: "Contact", href: "#contact" },
+    { title: "", positionId: 0 },
+    { title: "ABOUT ME", positionId: 1 },
+    { title: "MY STACK", positionId: 2 },
+    { title: "EXPERIENCE", positionId: 3 },
+    { title: "CONTACT ME", positionId: 4 },
   ];
 
   return (
@@ -53,13 +54,13 @@ const Navigation = ({
               onClick={onClose} // Close the menu when a link is clicked
             >
               <Link
-                key={index}
-                href={link.href}
+                key={link.positionId}
+                href={`#section-${link.positionId}`}
                 className={cn(
                   "text-4xl font-bold text-gray-400 hover:text-white transition-colors duration-300"
                 )}
               >
-                {link.name}
+                {link.title}
               </Link>
             </motion.div>
           ))}
