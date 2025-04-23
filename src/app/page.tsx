@@ -25,7 +25,7 @@ export default function Home() {
       <ScrollBar sections={sections} />
 
       {/* ► Only THIS element owns the scroll bar */}
-      <main className="h-screen scroll-smooth">
+      <main className="h-screen">
         {sections.map(({ Component, ...sec }, i) => (
           <Section
             key={sec.positionId}

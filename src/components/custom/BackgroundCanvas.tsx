@@ -29,7 +29,7 @@ function AnimatedScene() {
   return (
     <group ref={group}>
       <Sparkles
-        count={800}
+        count={1200}
         scale={[15, 15, 15]}
         size={1.5}
         color="#60a5fa"
