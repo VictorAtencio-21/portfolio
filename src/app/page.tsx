@@ -16,7 +16,7 @@ export default function Home() {
     { title: "", positionId: 0, Component: Main },
     { title: "ABOUT ME", positionId: 1, Component: About },
     { title: "MY STACK", positionId: 2, Component: Stack },
-    { title: "MY EXPERIENCE", positionId: 3, Component: Experience },
+    { title: "EXPERIENCE", positionId: 3, Component: Experience },
     { title: "", positionId: 4, Component: Contact },
   ];
 

@@ -34,28 +34,21 @@ const Contact = () => {
 
           <div className="flex justify-center gap-8 mt-16">
             <Link
-              href="https://github.com"
+              href="https://github.com/VictorAtencio-21"
               className="text-gray-400 hover:text-white transition-colors duration-300"
             >
               <Github className="w-6 h-6" />
               <span className="sr-only">GitHub</span>
             </Link>
             <Link
-              href="https://instagram.com"
-              className="text-gray-400 hover:text-white transition-colors duration-300"
-            >
-              <Instagram className="w-6 h-6" />
-              <span className="sr-only">Instagram</span>
-            </Link>
-            <Link
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/victor-atencio/"
               className="text-gray-400 hover:text-white transition-colors duration-300"
             >
               <Linkedin className="w-6 h-6" />
               <span className="sr-only">LinkedIn</span>
             </Link>
             <Link
-              href="https://wa.me/yourphonenumber"
+              href="https://wa.me/+584146195291"
               className="text-gray-400 hover:text-white transition-colors duration-300"
             >
               <MessageCircle className="w-6 h-6" />

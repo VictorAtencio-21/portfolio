@@ -11,7 +11,7 @@ const Navigation = ({
 }) => {
   // Side bar navigation menu
   const Links = [
-    { title: "", positionId: 0 },
+    { title: "HI", positionId: 0 },
     { title: "ABOUT ME", positionId: 1 },
     { title: "MY STACK", positionId: 2 },
     { title: "EXPERIENCE", positionId: 3 },
