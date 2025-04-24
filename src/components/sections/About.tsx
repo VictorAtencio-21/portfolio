@@ -41,13 +41,6 @@ export default function About() {
               worldwide. Time zones aren’t a blocker—just a fun puzzle.
             </p>
           </div>
-          <a
-            href="mailto:atenciomvictor@gmail.com"
-            className="bg-[#60a5fa] text-white text-sm font-medium px-4 py-2 rounded-lg text-center hover:bg-[#3b82f6] transition"
-          >
-            <MailIcon className="inline-block mr-2" size={16} />
-            Contact Me
-          </a>
         </div>
       </section>
     </div>
