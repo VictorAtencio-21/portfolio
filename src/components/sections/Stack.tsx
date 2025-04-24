@@ -1,9 +1,23 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
+
+interface TechStackItem {
+  name: string;
+  icon: string;
+  tint?: string; // Optional tint property for custom colors
+}
+
+interface TechStack {
+  frontend: TechStackItem[];
+  mobile: TechStackItem[];
+  backend: TechStackItem[];
+  tools: TechStackItem[];
+}
 
 // Define the tech stack data structure
-const techStack = {
+const techStack: TechStack = {
   frontend: [
     {
       name: "React",
@@ -28,11 +42,13 @@ const techStack = {
     {
       name: "Framer Motion",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/framermotion/framermotion-original.svg",
+      tint: "#FFFFFF", // Custom tint for Framer Motion icon, make it white
     },
     {
       name: "Three.js",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg",
-    }
+      tint: "#FFFFFF", // Custom tint for Three.js icon, make it white
+    },
   ],
   mobile: [
     {
@@ -58,9 +74,9 @@ const techStack = {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg",
     },
     {
-      // Light version of Express.js icon
       name: "Express",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+      tint: "#FFFFFF", // Custom tint for Express.js icon, make it white
     },
     {
       name: "Firebase",
@@ -73,6 +89,7 @@ const techStack = {
     {
       name: "Socket.IO",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
+      tint: "#FFFFFF", // Custom tint for Socket.IO icon, make it white
     },
   ],
   tools: [
@@ -92,8 +109,6 @@ const techStack = {
 } as const;
 
 const Stack = () => {
-  type TechCategory = keyof typeof techStack;
-
   return (
     <div className="max-w-7xl flex flex-col items-start justify-center">
       <section className="w-full flex flex-col space-y-4">
@@ -103,21 +118,25 @@ const Stack = () => {
               {category.toUpperCase()}
             </h2>
             <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-8 col-span-2">
-              {techStack[category as TechCategory].map((item) => (
-                <div
-                  key={item.name}
-                  className="w-full flex items-center gap-4 justify-start"
-                >
-                  <Image
-                    src={item.icon}
-                    alt={item.name}
-                    width={48}
-                    height={48}
-                    className="object-contain"
-                  />
-                  <span className="text-white text-3xl">{item.name}</span>
-                </div>
-              ))}
+              {techStack[category as keyof TechStack].map(
+                (item: TechStackItem) => (
+                  <div
+                    key={item.name}
+                    className="w-full flex items-center gap-4 justify-start"
+                  >
+                    <Image
+                      src={item.icon}
+                      alt={item.name}
+                      width={48}
+                      height={48}
+                      className={cn("object-contain", {
+                        "filter invert": item.tint === "#FFFFFF", // Apply white tint if specified
+                      })}
+                    />
+                    <span className="text-white text-3xl">{item.name}</span>
+                  </div>
+                )
+              )}
             </div>
           </div>
         ))}
