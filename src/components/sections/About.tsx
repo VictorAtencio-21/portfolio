@@ -1,5 +1,3 @@
-import { MailIcon } from "lucide-react";
-
 export default function About() {
   return (
     <div className="w-full max-w-7xl flex flex-col items-center justify-center">
