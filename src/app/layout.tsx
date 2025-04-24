@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-foreground text-background scroll-smooth`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-foreground text-background scroll-smooth px-4`}
       >
         <BackgroundCanvas />
         <Header />

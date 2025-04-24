@@ -95,11 +95,11 @@ const Stack = () => {
   type TechCategory = keyof typeof techStack;
 
   return (
-    <div className="max-w-7xl flex flex-col items-center justify-center">
+    <div className="max-w-7xl flex flex-col items-start justify-center">
       <section className="w-full flex flex-col space-y-4">
         {Object.keys(techStack).map((category) => (
           <div key={category} className="py-4 grid grid-cols-1 sm:grid-cols-3">
-            <h2 className="text-white text-5xl font-semibold mb-2">
+            <h2 className="text-white text-5xl font-semibold pb-8">
               {category.toUpperCase()}
             </h2>
             <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-8 col-span-2">
