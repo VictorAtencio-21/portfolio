@@ -21,11 +21,11 @@ const Section: React.FC<SectionProps> = ({
   ...props
 }) => {
   const sectionConxtext = useContext(SectionContext);
-  if (sectionConxtext === null) return;
 
-  const { setActiveSectionProgress, setActiveSection } = sectionConxtext;
+  const { setActiveSectionProgress, setActiveSection } = sectionConxtext || {};
 
   const container = useRef<HTMLDivElement>(null);
+
   const { scrollYProgress } = useScroll({
     target: container,
     offset: isFirst
@@ -37,8 +37,8 @@ const Section: React.FC<SectionProps> = ({
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     if (latest > 0 && latest < 1) {
-      setActiveSection(section.positionId);
-      setActiveSectionProgress(latest);
+      setActiveSection?.(section.positionId);
+      setActiveSectionProgress?.(latest);
     }
   });
 

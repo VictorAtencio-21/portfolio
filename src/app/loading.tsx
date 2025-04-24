@@ -1,8 +1,9 @@
+import Loader from '@/components/custom/Loaders/Loader'
 import React from 'react'
 
 const loading = () => {
   return (
-    <div>Loading</div>
+    <Loader />
   )
 }
 

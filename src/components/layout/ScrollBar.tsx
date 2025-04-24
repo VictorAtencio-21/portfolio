@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Section } from "./Section";
+import { Section } from "@/components/custom/Section";
 import { SectionContext } from "@/lib/SectionContext";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
@@ -12,7 +12,7 @@ const ScrollBar: React.FC<ScrollBarProps> = ({ sections }) => {
   const sectionContext = useContext(SectionContext);
   if (sectionContext === null) return null;
 
-  const { activeSection, activeSectionProgress } = sectionContext;
+  const { activeSection } = sectionContext;
 
   return (
     <motion.div className="fixed right-10 w-2 h-screen flex flex-col items-center justify-center z-10 gap-2">

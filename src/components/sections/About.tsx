@@ -1,5 +1,4 @@
-import { MailIcon, GlobeIcon } from "lucide-react";
-import Image from "next/image";
+import { MailIcon } from "lucide-react";
 
 export default function About() {
   return (

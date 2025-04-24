@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Mail, Github, Instagram, Linkedin, MessageCircle } from "lucide-react";
+import { Mail, Github, Linkedin, MessageCircle } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -11,11 +11,11 @@ const Contact = () => {
         <div className="w-full flex flex-col gap-6">
           <div className="rounded-xl transition-transform duration-300">
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-500 to-blue-900 text-transparent bg-clip-text">
-              Let's Connect
+              Here to Help
             </h2>
             <p className="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">
-              Have a project in mind? Let's work together to bring your ideas to
-              life!
+              Have a project in mind? We can work together to bring your ideas
+              to life!
             </p>
           </div>
 
