@@ -38,7 +38,7 @@ const Experience = () => {
             {experienceData.map((exp) => (
               <div
                 key={exp.company + exp.role}
-                className="w-full rounded-xl backdrop-blur-lg hover:scale-[1.02] transition-transform duration-300"
+                className="w-full rounded-xl hover:scale-[1.02] transition-transform duration-300"
               >
                 <p className="text-2xl text-gray-300 font-medium mt-1">
                   {exp.company}

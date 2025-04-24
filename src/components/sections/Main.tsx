@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { ResumeMenu } from "../custom/Buttons/ResumeMenu";
 
 const Main = () => {
   return (
@@ -25,20 +26,12 @@ const Main = () => {
       <div className="flex gap-4 items-center flex-col sm:flex-row">
         <a
           className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-          href=""
-          target="_blank"
+          href="mailto:atenciomvictor@gmail.com"
           rel="noopener noreferrer"
         >
           Hire Me
         </a>
-        <a
-          className="rounded-full border border-solid border-foreground transition-colors flex items-center justify-center bg-white text-foreground gap-2 hover:bg-[#e2e2e2] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-          href=""
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Resume
-        </a>
+        <ResumeMenu />
       </div>
     </div>
   );

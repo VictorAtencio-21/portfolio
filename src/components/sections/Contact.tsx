@@ -9,7 +9,7 @@ const Contact = () => {
     <div className="max-w-7xl flex flex-col items-center justify-center w-full py-16 px-4">
       <section className="w-full mx-auto flex flex-col space-y-12 text-center">
         <div className="w-full flex flex-col gap-6">
-          <div className="w-full rounded-xl backdrop-blur-lg transition-transform duration-300">
+          <div className="rounded-xl transition-transform duration-300">
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-500 to-blue-900 text-transparent bg-clip-text">
               Let's Connect
             </h2>

@@ -33,7 +33,7 @@ function AnimatedScene() {
         scale={[15, 15, 15]}
         size={1.5}
         color="#60a5fa"
-        speed={0.1} // lower = gentler flicker (default is 1)
+        speed={0.2} // lower = gentler flicker (default is 1)
       />
     </group>
   );

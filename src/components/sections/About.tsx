@@ -6,19 +6,19 @@ export default function About() {
     <div className="w-full max-w-7xl flex flex-col items-center justify-center">
       <section className="w-full py-6 grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Intro Card */}
-        <div className="rounded-lg backdrop-blur-lg">
+        <div className="rounded-lg">
           <h2 className="text-white text-xl font-semibold mb-2">
             Let me introduce myself
           </h2>
           <p className="text-zinc-400">
-            I’m a software developer from Maracaibo, Venezuela with over 4 years
+            I’m a software developer from Maracaibo, Venezuela with over 3 years
             of experience building clean, user-friendly digital products. I love
             turning complex problems into simple, intuitive solutions that make
             people’s lives easier.
           </p>
         </div>
         {/* Passion Card (full width) */}
-        <div className="rounded-lg backdrop-blur-lg">
+        <div className="rounded-lg">
           <h2 className="text-white text-xl font-semibold mb-2">
             My Passion for Coding
           </h2>
@@ -32,7 +32,7 @@ export default function About() {
         </div>
 
         {/* Location Card */}
-        <div className="rounded-lg flex flex-col justify-between backdrop-blur-lg">
+        <div className="rounded-lg flex flex-col justify-between">
           <div>
             <h2 className="text-white text-xl font-semibold mb-2">
               Remote & Flexible

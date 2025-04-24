@@ -1,7 +1,6 @@
 "use client";
-import ScrollBar from "@/components/custom/ScrollBar";
+import ScrollBar from "@/components/layout/ScrollBar";
 import Section from "@/components/custom/Section";
-import Footer from "@/components/layout/Footer";
 import About from "@/components/sections/About";
 import Contact from "@/components/sections/Contact";
 import Experience from "@/components/sections/Experience";
