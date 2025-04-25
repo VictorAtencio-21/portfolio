@@ -1,7 +1,10 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useScrollDirection } from "@/lib/hooks/useScrollDirection";
 
 interface TechStackItem {
   name: string;
@@ -109,17 +112,73 @@ const techStack: TechStack = {
 } as const;
 
 const Stack = () => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+  const scrollDirection = useScrollDirection();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
+  const categories = Object.keys(techStack) as (keyof TechStack)[];
+  const total = categories.length;
+
   return (
     <div className="max-w-7xl flex flex-col items-start justify-center">
       <section className="w-full flex flex-col space-y-4">
-        {Object.keys(techStack).map((category) => (
-          <div key={category} className="py-4 grid grid-cols-1 sm:grid-cols-3">
-            <h2 className="text-white text-5xl font-semibold pb-8">
-              {category.toUpperCase()}
-            </h2>
-            <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-8 col-span-2">
-              {techStack[category as keyof TechStack].map(
-                (item: TechStackItem) => (
+        {categories.map((category, index) => {
+          const controls = useAnimation();
+          const { ref, inView } = useInView({
+            triggerOnce: false,
+            threshold: 0,
+          });
+
+          useEffect(() => {
+            if (inView) {
+              controls.start("visible");
+            } else {
+              controls.start("hidden");
+            }
+          }, [controls, inView]);
+
+          // Delay based on scroll direction (without reversing the layout)
+          const delay =
+            scrollDirection === "down"
+              ? index * 0.3
+              : (total - 1 - index) * 0.3;
+
+          return (
+            <motion.div
+              key={category}
+              ref={ref}
+              initial="hidden"
+              animate={controls}
+              variants={{
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.6, delay },
+                },
+                hidden: {
+                  opacity: 0,
+                  y: scrollDirection === "down" ? 100 : -100,
+                  transition: { duration: 0.6 },
+                },
+              }}
+              className="py-4 grid grid-cols-1 sm:grid-cols-3"
+            >
+              <h2 className="text-white text-5xl font-semibold pb-8">
+                {category.toUpperCase()}
+              </h2>
+              <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-8 col-span-2">
+                {techStack[category].map((item) => (
                   <div
                     key={item.name}
                     className="w-full flex items-center gap-4 justify-start"
@@ -130,16 +189,16 @@ const Stack = () => {
                       width={48}
                       height={48}
                       className={cn("object-contain", {
-                        "filter invert": item.tint === "#FFFFFF", // Apply white tint if specified
+                        "filter invert": item.tint === "#FFFFFF",
                       })}
                     />
                     <span className="text-white text-3xl">{item.name}</span>
                   </div>
-                )
-              )}
-            </div>
-          </div>
-        ))}
+                ))}
+              </div>
+            </motion.div>
+          );
+        })}
       </section>
     </div>
   );
