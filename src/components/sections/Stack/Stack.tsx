@@ -1,15 +1,12 @@
 "use client";
-import React, { useEffect } from "react";
-import Image from "next/image";
-import { cn } from "@/lib/utils";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from "react";
 import { useScrollDirection } from "@/lib/hooks/useScrollDirection";
+import StackCategory from "./StackCategory";
 
 interface TechStackItem {
   name: string;
   icon: string;
-  tint?: string; // Optional tint property for custom colors
+  tint?: string;
 }
 
 interface TechStack {
@@ -19,7 +16,6 @@ interface TechStack {
   tools: TechStackItem[];
 }
 
-// Define the tech stack data structure
 const techStack: TechStack = {
   frontend: [
     {
@@ -45,12 +41,12 @@ const techStack: TechStack = {
     {
       name: "Framer Motion",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/framermotion/framermotion-original.svg",
-      tint: "#FFFFFF", // Custom tint for Framer Motion icon, make it white
+      tint: "#FFFFFF",
     },
     {
       name: "Three.js",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg",
-      tint: "#FFFFFF", // Custom tint for Three.js icon, make it white
+      tint: "#FFFFFF",
     },
   ],
   mobile: [
@@ -79,7 +75,7 @@ const techStack: TechStack = {
     {
       name: "Express",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-      tint: "#FFFFFF", // Custom tint for Express.js icon, make it white
+      tint: "#FFFFFF",
     },
     {
       name: "Firebase",
@@ -92,7 +88,7 @@ const techStack: TechStack = {
     {
       name: "Socket.IO",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
-      tint: "#FFFFFF", // Custom tint for Socket.IO icon, make it white
+      tint: "#FFFFFF",
     },
   ],
   tools: [
@@ -109,24 +105,10 @@ const techStack: TechStack = {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
     },
   ],
-} as const;
+};
 
 const Stack = () => {
-  const controls = useAnimation();
-  const { ref, inView } = useInView({
-    triggerOnce: false,
-    threshold: 0.2,
-  });
   const scrollDirection = useScrollDirection();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    } else {
-      controls.start("hidden");
-    }
-  }, [controls, inView]);
-
   const categories = Object.keys(techStack) as (keyof TechStack)[];
   const total = categories.length;
 
@@ -134,69 +116,19 @@ const Stack = () => {
     <div className="max-w-7xl flex flex-col items-start justify-center">
       <section className="w-full flex flex-col space-y-4">
         {categories.map((category, index) => {
-          const controls = useAnimation();
-          const { ref, inView } = useInView({
-            triggerOnce: false,
-            threshold: 0,
-          });
-
-          useEffect(() => {
-            if (inView) {
-              controls.start("visible");
-            } else {
-              controls.start("hidden");
-            }
-          }, [controls, inView]);
-
-          // Delay based on scroll direction (without reversing the layout)
           const delay =
             scrollDirection === "down"
               ? index * 0.3
               : (total - 1 - index) * 0.3;
 
           return (
-            <motion.div
+            <StackCategory
               key={category}
-              ref={ref}
-              initial="hidden"
-              animate={controls}
-              variants={{
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.6, delay },
-                },
-                hidden: {
-                  opacity: 0,
-                  y: scrollDirection === "down" ? 100 : -100,
-                  transition: { duration: 0.6 },
-                },
-              }}
-              className="py-4 grid grid-cols-1 sm:grid-cols-3"
-            >
-              <h2 className="text-white text-5xl font-semibold pb-8">
-                {category.toUpperCase()}
-              </h2>
-              <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-8 col-span-2">
-                {techStack[category].map((item) => (
-                  <div
-                    key={item.name}
-                    className="w-full flex items-center gap-4 justify-start"
-                  >
-                    <Image
-                      src={item.icon}
-                      alt={item.name}
-                      width={48}
-                      height={48}
-                      className={cn("object-contain", {
-                        "filter invert": item.tint === "#FFFFFF",
-                      })}
-                    />
-                    <span className="text-white text-3xl">{item.name}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
+              category={category}
+              items={techStack[category]}
+              delay={delay}
+              scrollDirection={scrollDirection}
+            />
           );
         })}
       </section>
