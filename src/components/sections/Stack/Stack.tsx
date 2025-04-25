@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
-import Image from "next/image";
-import { cn } from "@/lib/utils";
+import { useScrollDirection } from "@/lib/hooks/useScrollDirection";
+import StackCategory from "./StackCategory";
 
 interface TechStackItem {
   name: string;
   icon: string;
-  tint?: string; // Optional tint property for custom colors
+  tint?: string;
 }
 
 interface TechStack {
@@ -16,7 +16,6 @@ interface TechStack {
   tools: TechStackItem[];
 }
 
-// Define the tech stack data structure
 const techStack: TechStack = {
   frontend: [
     {
@@ -42,12 +41,12 @@ const techStack: TechStack = {
     {
       name: "Framer Motion",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/framermotion/framermotion-original.svg",
-      tint: "#FFFFFF", // Custom tint for Framer Motion icon, make it white
+      tint: "#FFFFFF",
     },
     {
       name: "Three.js",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg",
-      tint: "#FFFFFF", // Custom tint for Three.js icon, make it white
+      tint: "#FFFFFF",
     },
   ],
   mobile: [
@@ -76,7 +75,7 @@ const techStack: TechStack = {
     {
       name: "Express",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-      tint: "#FFFFFF", // Custom tint for Express.js icon, make it white
+      tint: "#FFFFFF",
     },
     {
       name: "Firebase",
@@ -89,7 +88,7 @@ const techStack: TechStack = {
     {
       name: "Socket.IO",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
-      tint: "#FFFFFF", // Custom tint for Socket.IO icon, make it white
+      tint: "#FFFFFF",
     },
   ],
   tools: [
@@ -106,40 +105,32 @@ const techStack: TechStack = {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
     },
   ],
-} as const;
+};
 
 const Stack = () => {
+  const scrollDirection = useScrollDirection();
+  const categories = Object.keys(techStack) as (keyof TechStack)[];
+  const total = categories.length;
+
   return (
     <div className="max-w-7xl flex flex-col items-start justify-center">
       <section className="w-full flex flex-col space-y-4">
-        {Object.keys(techStack).map((category) => (
-          <div key={category} className="py-4 grid grid-cols-1 sm:grid-cols-3">
-            <h2 className="text-white text-5xl font-semibold pb-8">
-              {category.toUpperCase()}
-            </h2>
-            <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-8 col-span-2">
-              {techStack[category as keyof TechStack].map(
-                (item: TechStackItem) => (
-                  <div
-                    key={item.name}
-                    className="w-full flex items-center gap-4 justify-start"
-                  >
-                    <Image
-                      src={item.icon}
-                      alt={item.name}
-                      width={48}
-                      height={48}
-                      className={cn("object-contain", {
-                        "filter invert": item.tint === "#FFFFFF", // Apply white tint if specified
-                      })}
-                    />
-                    <span className="text-white text-3xl">{item.name}</span>
-                  </div>
-                )
-              )}
-            </div>
-          </div>
-        ))}
+        {categories.map((category, index) => {
+          const delay =
+            scrollDirection === "down"
+              ? index * 0.3
+              : (total - 1 - index) * 0.3;
+
+          return (
+            <StackCategory
+              key={category}
+              category={category}
+              items={techStack[category]}
+              delay={delay}
+              scrollDirection={scrollDirection}
+            />
+          );
+        })}
       </section>
     </div>
   );
