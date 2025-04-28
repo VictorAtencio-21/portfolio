@@ -1,16 +1,20 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import { useTranslations } from "next-intl";
 import { ResumeMenu } from "../custom/Buttons/ResumeMenu";
 
 const Main = () => {
+  const t = useTranslations("main");
+  const alt = useTranslations("alt");
+
   return (
     <div className="flex flex-col gap-4 items-center justify-center max-w-7xl">
       <h1 className="text-2xl sm:text-5xl font-bold tracking-[-.01em] text-start sm:text-left">
-        Hi there, I’m Victor{" "}
+        {t("greeting")}{" "}
         <span className="waving-hand">
           <Image
             src="/waving-hand.svg"
-            alt="Waving Hand"
+            alt={alt("wavingHand")}
             width={40}
             height={40}
             className="inline-block"
@@ -18,10 +22,7 @@ const Main = () => {
         </span>
       </h1>
 
-      <p className="text-lg sm:text-lg text-center">
-        Passionate Full Stack Developer with a knack for crafting elegant
-        solutions.
-      </p>
+      <p className="text-lg sm:text-lg text-center">{t("introduction")}</p>
 
       <div className="flex gap-4 items-center flex-col sm:flex-row">
         <a
@@ -29,9 +30,10 @@ const Main = () => {
           href="mailto:atenciomvictor@gmail.com"
           rel="noopener noreferrer"
         >
-          Hire Me
+          {t("hireMe")}
         </a>
-        <ResumeMenu />
+
+        <ResumeMenu t={t} />
       </div>
     </div>
   );
