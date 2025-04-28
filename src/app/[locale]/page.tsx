@@ -5,7 +5,7 @@ import About from "@/components/sections/About";
 import Contact from "@/components/sections/Contact";
 import Experience from "@/components/sections/Experience";
 import Main from "@/components/sections/Main";
-import Stack from "@/components/sections/Stack";
+import Stack from "@/components/sections/Stack/Stack";
 import { SectionContext, useSectionContextValues } from "@/lib/SectionContext";
 import { useTranslations } from "next-intl";
 
