@@ -1,0 +1,46 @@
+{
+  "navigation": {
+    "main": "INICIO",
+    "about": "SOBRE MÍ",
+    "stack": "MI STACK",
+    "experience": "EXPERIENCIA",
+    "contact": "CONTACTO"
+  },
+  "main": {
+    "greeting": "¡Hola! Soy Victor",
+    "introduction": "Desarrollador Full Stack apasionado por crear soluciones elegantes",
+    "hireMe": "Contrátame",
+    "resume": "Currículum",
+    "resumeLanguage": "Idioma del Currículum",
+    "english": "Inglés",
+    "spanish": "Español"
+  },
+  "about": {
+    "intro": {
+      "title": "Permíteme presentarme",
+      "description": "Soy un desarrollador de software de Maracaibo, Venezuela, con más de 3 años de experiencia construyendo productos digitales limpios y amigables. Me encanta convertir problemas complejos en soluciones simples e intuitivas que faciliten la vida de las personas."
+    },
+    "passion": {
+      "title": "Mi Pasión por la Programación",
+      "description": "Realmente disfruto lo que hago. La programación no es solo mi trabajo, es mi forma favorita de aprender, crear y resolver problemas reales. Constantemente exploro nuevas tecnologías, supero mis límites y construyo cosas que importan. Siempre estoy en busca de nuevos desafíos y oportunidades para crecer."
+    },
+    "location": {
+      "title": "Remoto y Flexible",
+      "description": "Estoy ubicado en Maracaibo, Venezuela y abierto a oportunidades remotas en todo el mundo. Las zonas horarias no son un obstáculo, son solo un rompecabezas divertido."
+    }
+  },
+  "contact": {
+    "title": "Estoy aquí para ayudar",
+    "subtitle": "¿Tienes un proyecto en mente? ¡Podemos trabajar juntos para dar vida a tus ideas!",
+    "contactMe": "Contáctame",
+    "socialLinks": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "whatsapp": "WhatsApp"
+    },
+    "emailText": "No dudes en contactarme por correo electrónico en"
+  },
+  "alt": {
+    "wavingHand": "Mano Saludando"
+  }
+}

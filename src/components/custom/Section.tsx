@@ -5,6 +5,7 @@ import { useMotionValueEvent, useScroll } from "motion/react";
 export type Section = {
   positionId: number;
   title: string;
+  hideTitle?: boolean;
 };
 
 interface SectionProps extends HTMLAttributes<HTMLDivElement> {
@@ -52,7 +53,7 @@ const Section: React.FC<SectionProps> = ({
     >
       {/* your inner wrapper stays the same */}
       <div className="w-full max-w-7xl flex flex-col gap-2 items-center justify-center">
-        {section.title && (
+        {section.title && !section.hideTitle && (
           <h1 className="w-full text-2xl text-neutral-400">{section.title}</h1>
         )}
         {children}

@@ -1,21 +1,25 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 import { MenuSlide, slide } from "@/lib/menuAnim";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "../custom/LanguageSwitcher";
 
 const Navigation = ({
   onClose, // Function to close the menu when a link is clicked
 }: {
   onClose: () => void;
 }) => {
-  // Side bar navigation menu
-  const Links = [
-    { title: "HI", positionId: 0 },
-    { title: "ABOUT ME", positionId: 1 },
-    { title: "MY STACK", positionId: 2 },
-    { title: "EXPERIENCE", positionId: 3 },
-    { title: "CONTACT ME", positionId: 4 },
+  const t = useTranslations("navigation");
+
+  const sections = [
+    { title: t("main"), positionId: 0 },
+    { title: t("about"), positionId: 1 },
+    { title: t("stack"), positionId: 2 },
+    { title: t("experience"), positionId: 3 },
+    { title: t("contact"), positionId: 4 },
   ];
 
   return (
@@ -43,7 +47,7 @@ const Navigation = ({
 
         <nav className="flex flex-col items-start mt-8 space-y-8">
           {/* Map through the links array and create a link for each item */}
-          {Links.map((link, index) => (
+          {sections.map((link, index) => (
             <motion.div
               custom={index}
               key={index}
@@ -64,6 +68,7 @@ const Navigation = ({
               </Link>
             </motion.div>
           ))}
+          <LanguageSwitcher />
         </nav>
       </div>
     </motion.div>

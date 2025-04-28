@@ -1,0 +1,46 @@
+{
+  "navigation": {
+    "main": "HOME",
+    "about": "ABOUT ME",
+    "stack": "MY STACK",
+    "experience": "EXPERIENCE",
+    "contact": "CONTACT"
+  },
+  "main": {
+    "greeting": "Hi there, I'm Victor",
+    "introduction": "Passionate Full Stack Developer with a knack for crafting elegant solutions",
+    "hireMe": "Hire Me",
+    "resume": "Resume",
+    "resumeLanguage": "Resume Language",
+    "english": "English",
+    "spanish": "Spanish"
+  },
+  "about": {
+    "intro": {
+      "title": "Let me introduce myself",
+      "description": "I'm a software developer from Maracaibo, Venezuela with over 3 years of experience building clean, user-friendly digital products. I love turning complex problems into simple, intuitive solutions that make people's lives easier."
+    },
+    "passion": {
+      "title": "My Passion for Coding",
+      "description": "I genuinely enjoy what I do. Coding isn't just my job—it's my favorite way to learn, create, and solve real problems. I'm constantly exploring new tech, pushing my limits, and building things that matter. I'm always on the lookout for new challenges and opportunities to grow."
+    },
+    "location": {
+      "title": "Remote & Flexible",
+      "description": "I'm based in Maracaibo, Venezuela and open to remote opportunities worldwide. Time zones aren't a blocker—just a fun puzzle."
+    }
+  },
+  "contact": {
+    "title": "Here to Help",
+    "subtitle": "Have a project in mind? We can work together to bring your ideas to life!",
+    "contactMe": "Contact Me",
+    "socialLinks": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "whatsapp": "WhatsApp"
+    },
+    "emailText": "Feel free to reach out via email at"
+  },
+  "alt": {
+    "wavingHand": "Waving Hand"
+  }
+}

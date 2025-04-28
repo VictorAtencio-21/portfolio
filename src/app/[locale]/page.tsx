@@ -7,16 +7,19 @@ import Experience from "@/components/sections/Experience";
 import Main from "@/components/sections/Main";
 import Stack from "@/components/sections/Stack/Stack";
 import { SectionContext, useSectionContextValues } from "@/lib/SectionContext";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
   const { values } = useSectionContextValues();
 
+  const t = useTranslations("navigation");
+
   const sections = [
-    { title: "", positionId: 0, Component: Main },
-    { title: "ABOUT ME", positionId: 1, Component: About },
-    { title: "MY STACK", positionId: 2, Component: Stack },
-    { title: "EXPERIENCE", positionId: 3, Component: Experience },
-    { title: "", positionId: 4, Component: Contact },
+    { title: t("main"), positionId: 0, Component: Main, hideTitle: true },
+    { title: t("about"), positionId: 1, Component: About },
+    { title: t("stack"), positionId: 2, Component: Stack },
+    { title: t("experience"), positionId: 3, Component: Experience },
+    { title: t("contact"), positionId: 4, Component: Contact, hideTitle: true },
   ];
 
   return (
