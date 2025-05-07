@@ -108,26 +108,17 @@ const techStack: TechStack = {
 };
 
 const Stack = () => {
-  const scrollDirection = useScrollDirection();
   const categories = Object.keys(techStack) as (keyof TechStack)[];
-  const total = categories.length;
 
   return (
     <div className="max-w-7xl flex flex-col items-start justify-center">
       <section className="w-full flex flex-col space-y-4">
         {categories.map((category, index) => {
-          const delay =
-            scrollDirection === "down"
-              ? index * 0.3
-              : (total - 1 - index) * 0.3;
-
           return (
             <StackCategory
               key={category}
               category={category}
               items={techStack[category]}
-              delay={delay}
-              scrollDirection={scrollDirection}
             />
           );
         })}

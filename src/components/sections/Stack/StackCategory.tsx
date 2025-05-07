@@ -1,6 +1,4 @@
-import React, { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -13,49 +11,11 @@ interface TechStackItem {
 interface StackCategoryProps {
   category: string;
   items: TechStackItem[];
-  delay: number;
-  scrollDirection: "up" | "down";
 }
 
-const StackCategory: React.FC<StackCategoryProps> = ({
-  category,
-  items,
-  delay,
-  scrollDirection,
-}) => {
-  const controls = useAnimation();
-  const { ref, inView } = useInView({
-    triggerOnce: false,
-    threshold: 0.2,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    } else {
-      controls.start("hidden");
-    }
-  }, [controls, inView]);
-
+const StackCategory: React.FC<StackCategoryProps> = ({ category, items }) => {
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={{
-        visible: {
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.6, delay },
-        },
-        hidden: {
-          opacity: 0,
-          y: scrollDirection === "down" ? 100 : -100,
-          transition: { duration: 0.6 },
-        },
-      }}
-      className="py-4 grid grid-cols-1 sm:grid-cols-3"
-    >
+    <div className="py-4 grid grid-cols-1 sm:grid-cols-3">
       <h2 className="text-white text-5xl font-semibold pb-8">
         {category.toUpperCase()}
       </h2>
@@ -78,7 +38,7 @@ const StackCategory: React.FC<StackCategoryProps> = ({
           </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 
