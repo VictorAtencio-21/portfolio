@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { useScrollDirection } from "@/lib/hooks/useScrollDirection";
 import StackCategory from "./StackCategory";
 
 interface TechStackItem {
