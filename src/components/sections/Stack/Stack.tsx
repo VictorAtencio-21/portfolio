@@ -111,7 +111,10 @@ const Stack = () => {
 
   return (
     <div className="max-w-7xl flex flex-col items-start justify-center">
-      <section className="w-full flex flex-col space-y-4">
+      <section
+        aria-label="Technology stack"
+        className="w-full flex flex-col space-y-4"
+      >
         {categories.map((category) => {
           return (
             <StackCategory
