@@ -3,6 +3,7 @@
     "main": "HOME",
     "about": "ABOUT ME",
     "stack": "MY STACK",
+    "projects": "PROJECTS",
     "experience": "EXPERIENCE",
     "contact": "CONTACT"
   },
@@ -39,6 +40,45 @@
       "whatsapp": "WhatsApp"
     },
     "emailText": "Feel free to reach out via email at"
+  },
+  "projects": {
+    "title": "Featured work",
+    "subtitle": "A selection of products I've helped launch and evolve. Each one balances thoughtful UX with resilient engineering so teams can keep scaling with confidence.",
+    "items": [
+      {
+        "id": "pulse",
+        "name": "Pulse",
+        "tagline": "Fitness coaching OS",
+        "description": "Pulse is a fitness management platform built with React Native and Expo that gives trainers one command center for programs, payments, and client progress analytics.",
+        "highlights": [
+          "React Native & Expo",
+          "Progress tracking dashboards",
+          "Automated payment reminders"
+        ]
+      },
+      {
+        "id": "slive",
+        "name": "SLIVE.AI",
+        "tagline": "Enterprise collaboration",
+        "description": "SLIVE.AI unifies ERP operations, social collaboration, and conversational AI to help enterprises orchestrate their people, processes, and decisions in real time.",
+        "highlights": [
+          "ERP + social workspace",
+          "Conversational AI copilots",
+          "Workflow automation"
+        ]
+      },
+      {
+        "id": "burger",
+        "name": "Burger Smoke",
+        "tagline": "Digital menu & ordering",
+        "description": "Burger Smoke is a lightweight ordering experience that turns a dynamic web menu into WhatsApp-ready takeout requests for fast-moving local businesses.",
+        "highlights": [
+          "Real-time menu updates",
+          "WhatsApp order routing",
+          "Optimized for small teams"
+        ]
+      }
+    ]
   },
   "alt": {
     "wavingHand": "Waving Hand"

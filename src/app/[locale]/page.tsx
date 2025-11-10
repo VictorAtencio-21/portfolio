@@ -5,6 +5,7 @@ import About from "@/components/sections/About";
 import Contact from "@/components/sections/Contact";
 import Experience from "@/components/sections/Experience";
 import Main from "@/components/sections/Main";
+import Projects from "@/components/sections/Projects";
 import Stack from "@/components/sections/Stack/Stack";
 import { SectionContext, useSectionContextValues } from "@/lib/SectionContext";
 import { useEffect } from "react";
@@ -19,8 +20,9 @@ export default function Home() {
     { title: t("main"), positionId: 0, Component: Main, hideTitle: true },
     { title: t("about"), positionId: 1, Component: About },
     { title: t("stack"), positionId: 2, Component: Stack },
-    { title: t("experience"), positionId: 3, Component: Experience },
-    { title: t("contact"), positionId: 4, Component: Contact, hideTitle: true },
+    { title: t("projects"), positionId: 3, Component: Projects },
+    { title: t("experience"), positionId: 4, Component: Experience },
+    { title: t("contact"), positionId: 5, Component: Contact, hideTitle: true },
   ];
 
   useEffect(() => {
