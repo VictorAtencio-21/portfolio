@@ -8,6 +8,7 @@ interface ProjectHighlight {
   tagline: string;
   description: string;
   highlights?: string[];
+  url?: string | null;
 }
 
 const Projects = () => {
@@ -57,6 +58,24 @@ const Projects = () => {
                 ))}
               </ul>
             ) : null}
+
+            <div className="mt-auto pt-6">
+              {project.url ? (
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-medium text-white transition-colors duration-300 hover:border-sky-400 hover:text-sky-300"
+                >
+                  {t("visitProject")}
+                  <span aria-hidden="true">↗</span>
+                </a>
+              ) : (
+                <span className="inline-flex items-center rounded-full border border-dashed border-white/10 px-4 py-2 text-sm font-medium text-gray-400">
+                  {t("comingSoon")}
+                </span>
+              )}
+            </div>
           </article>
         ))}
       </div>

@@ -44,12 +44,15 @@
   "projects": {
     "title": "Proyectos destacados",
     "subtitle": "Una selección de productos en los que he colaborado para lanzarlos y hacerlos crecer. Cada uno equilibra una experiencia cuidada con una ingeniería sólida para que los equipos sigan escalando con confianza.",
+    "visitProject": "Ver proyecto",
+    "comingSoon": "¡Próximamente!",
     "items": [
       {
         "id": "pulse",
         "name": "Pulse",
         "tagline": "Plataforma para entrenadores",
         "description": "Pulse es una plataforma de gestión fitness creada con React Native y Expo que ofrece a los entrenadores un centro de control para planes, pagos y analíticas de progreso.",
+        "url": null,
         "highlights": [
           "React Native y Expo",
           "Paneles de progreso",
@@ -61,6 +64,7 @@
         "name": "SLIVE.AI",
         "tagline": "Colaboración empresarial",
         "description": "SLIVE.AI unifica operaciones ERP, colaboración social y una IA conversacional para orquestar personas, procesos y decisiones en tiempo real.",
+        "url": "https://slive.ai",
         "highlights": [
           "ERP + red social interna",
           "Copilotos de IA conversacional",
@@ -72,6 +76,7 @@
         "name": "Burger Smoke",
         "tagline": "Menú y pedidos digitales",
         "description": "Burger Smoke es una experiencia ligera de pedidos que transforma un menú web dinámico en solicitudes de takeout listas para WhatsApp para negocios locales ágiles.",
+        "url": "https://burgersmoke.vercel.app",
         "highlights": [
           "Actualizaciones del menú en tiempo real",
           "Pedidos por WhatsApp",
