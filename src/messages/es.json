@@ -3,6 +3,7 @@
     "main": "INICIO",
     "about": "SOBRE MÍ",
     "stack": "MI STACK",
+    "projects": "PROYECTOS",
     "experience": "EXPERIENCIA",
     "contact": "CONTACTO"
   },
@@ -39,6 +40,45 @@
       "whatsapp": "WhatsApp"
     },
     "emailText": "No dudes en contactarme por correo electrónico en"
+  },
+  "projects": {
+    "title": "Proyectos destacados",
+    "subtitle": "Una selección de productos en los que he colaborado para lanzarlos y hacerlos crecer. Cada uno equilibra una experiencia cuidada con una ingeniería sólida para que los equipos sigan escalando con confianza.",
+    "items": [
+      {
+        "id": "pulse",
+        "name": "Pulse",
+        "tagline": "Plataforma para entrenadores",
+        "description": "Pulse es una plataforma de gestión fitness creada con React Native y Expo que ofrece a los entrenadores un centro de control para planes, pagos y analíticas de progreso.",
+        "highlights": [
+          "React Native y Expo",
+          "Paneles de progreso",
+          "Recordatorios automatizados de pago"
+        ]
+      },
+      {
+        "id": "slive",
+        "name": "SLIVE.AI",
+        "tagline": "Colaboración empresarial",
+        "description": "SLIVE.AI unifica operaciones ERP, colaboración social y una IA conversacional para orquestar personas, procesos y decisiones en tiempo real.",
+        "highlights": [
+          "ERP + red social interna",
+          "Copilotos de IA conversacional",
+          "Automatización de flujos"
+        ]
+      },
+      {
+        "id": "burger",
+        "name": "Burger Smoke",
+        "tagline": "Menú y pedidos digitales",
+        "description": "Burger Smoke es una experiencia ligera de pedidos que transforma un menú web dinámico en solicitudes de takeout listas para WhatsApp para negocios locales ágiles.",
+        "highlights": [
+          "Actualizaciones del menú en tiempo real",
+          "Pedidos por WhatsApp",
+          "Optimizado para equipos pequeños"
+        ]
+      }
+    ]
   },
   "alt": {
     "wavingHand": "Mano Saludando"
