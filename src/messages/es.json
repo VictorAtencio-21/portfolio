@@ -5,7 +5,10 @@
     "stack": "MI STACK",
     "projects": "PROYECTOS",
     "experience": "EXPERIENCIA",
-    "contact": "CONTACTO"
+    "contact": "CONTACTO",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "language": "Idioma"
   },
   "main": {
     "greeting": "¡Hola! Soy Victor",
