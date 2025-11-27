@@ -1,41 +1,46 @@
 "use client";
-import React, { useState } from "react";
-import { Button } from "../ui/button";
-import Navigation from "./Navigation";
-import { AnimatePresence } from "framer-motion";
-import { Menu } from "lucide-react"; // Importing the Menu icon from lucide-react
+import Link from "next/link";
+import React from "react";
+import LanguageSwitcher from "../custom/LanguageSwitcher";
+import { useTranslations } from "next-intl";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
-  // State to manage the side menu
-  const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations("navigation");
+
+  const navLinks = [
+    { label: t("main"), positionId: 0 },
+    { label: t("about"), positionId: 1 },
+    { label: t("stack"), positionId: 2 },
+    { label: t("projects"), positionId: 3 },
+    { label: t("experience"), positionId: 4 },
+    { label: t("contact"), positionId: 5 },
+  ];
 
   return (
-    <>
-      <header className="fixed top-0 left-0 right-0 z-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-end p-3">
-            <Button
-              variant="ghost"
-              className="backdrop-blur-md hover:bg-neutral-800/50 transition-colors"
-              size={"lg"}
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              <Menu size={48} color="#fff" className="h-24 w-24"/>
-            </Button>
+    <header className="fixed top-0 left-0 right-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="mt-4 flex items-center justify-between rounded-full border border-white/10 bg-black/30 px-4 py-3 backdrop-blur-lg">
+          <nav className="flex flex-wrap items-center gap-3 text-sm md:gap-6" aria-label="Primary">
+            {navLinks.map(({ label, positionId }) => (
+              <Link
+                key={positionId}
+                href={`#section-${positionId}`}
+                className={cn(
+                  "text-sm font-medium text-gray-300 transition-colors hover:text-white",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                )}
+              >
+                {label}
+              </Link>
+            ))}
+          </nav>
+          <div className="flex items-center gap-2">
+            <LanguageSwitcher />
           </div>
         </div>
-      </header>
-
-      <AnimatePresence mode="wait">
-        {isOpen && (
-          <Navigation
-            onClose={
-              () => setIsOpen(false) // Close the menu when a link is clicked
-            }
-          />
-        )}
-      </AnimatePresence>
-    </>
+      </div>
+    </header>
   );
 };
 
