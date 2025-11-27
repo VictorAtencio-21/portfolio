@@ -19,8 +19,6 @@ export default function LanguageSwitcher() {
 
   const isActive = (locale: string) => currentLocale === locale;
 
-  console.log(currentLocale);
-
   return (
     <div className="flex gap-2">
       <Button
