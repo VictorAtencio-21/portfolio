@@ -10,6 +10,7 @@ import Stack from "@/components/sections/Stack/Stack";
 import { SectionContext, useSectionContextValues } from "@/lib/SectionContext";
 import { useEffect } from "react";
 import { useTranslations } from "next-intl";
+import Snowfall from "react-snowfall";
 
 export default function Home() {
   const { values } = useSectionContextValues();
@@ -53,6 +54,7 @@ export default function Home() {
 
   return (
     <SectionContext.Provider value={values}>
+      <Snowfall />
       <ScrollBar sections={sections} />
 
       {/* ► Only THIS element owns the scroll bar */}
