@@ -4,9 +4,15 @@ import React from "react";
 const experienceData = [
   {
     role: "Senior Software Developer",
+    company: "Melt Studio",
+    location: "Maracaibo, Venezuela",
+    period: "Dec 2025 – Present",
+  },
+  {
+    role: "Senior Software Developer",
     company: "Bigwise",
     location: "Maracaibo, Venezuela",
-    period: "Nov 2023 – Present",
+    period: "Nov 2023 – Dec 2025",
   },
   {
     role: "Full Stack Developer",
