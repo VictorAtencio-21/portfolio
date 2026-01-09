@@ -1,7 +1,6 @@
 "use client";
 import { usePathname, useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
-import Image from "next/image";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 
@@ -23,37 +22,29 @@ export default function LanguageSwitcher() {
     <div className="flex gap-2">
       <Button
         variant={"ghost"}
-        size={"icon"}
-        className={"hover:bg-white/10 cursor-pointer"}
+        size={"sm"}
+        className={cn(
+          "px-2 py-1 text-sm font-medium rounded-md transition-colors",
+          isActive("en")
+            ? "bg-white/20 text-white"
+            : "text-gray-400 hover:text-white hover:bg-white/10"
+        )}
         onClick={() => switchLocale("en")}
       >
-        <Image
-          src="/UK.svg"
-          alt="English"
-          width={24}
-          height={24}
-          className={cn({
-            "opacity-100": isActive("en"),
-            "opacity-50": !isActive("en"),
-          })}
-        />
+        EN
       </Button>
       <Button
         variant={"ghost"}
-        size={"icon"}
-        className={"hover:bg-white/10 cursor-pointer"}
+        size={"sm"}
+        className={cn(
+          "px-2 py-1 text-sm font-medium rounded-md transition-colors",
+          isActive("es")
+            ? "bg-white/20 text-white"
+            : "text-gray-400 hover:text-white hover:bg-white/10"
+        )}
         onClick={() => switchLocale("es")}
       >
-        <Image
-          src="/ES.svg"
-          alt="Spanish"
-          width={24}
-          height={24}
-          className={cn({
-            "opacity-100": isActive("es"),
-            "opacity-50": !isActive("es"),
-          })}
-        />
+        ES
       </Button>
     </div>
   );

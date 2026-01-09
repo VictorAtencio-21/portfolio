@@ -48,7 +48,8 @@ const Section: React.FC<SectionProps> = ({
       {...props}
       ref={container}
       /* exactly 100 vh, centres the content, snaps into place */
-      className="min-h-screen md:h-screen w-full flex items-center justify-center snap-start px-4"
+      /* scroll-mt-20 adds top margin when scrolling to prevent header overlap */
+      className="min-h-screen md:h-screen w-full flex items-center justify-center snap-start px-4 scroll-mt-20"
       id={`section-${section.positionId}`}
     >
       {/* your inner wrapper stays the same */}
