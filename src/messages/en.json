@@ -55,7 +55,7 @@
         "name": "Pulse",
         "tagline": "Fitness coaching OS",
         "description": "Pulse is a fitness management platform built with React Native and Expo that gives trainers one command center for programs, payments, and client progress analytics.",
-        "url": null,
+        "url": "https://pulsefit.app",
         "highlights": [
           "React Native & Expo",
           "Progress tracking dashboards",
