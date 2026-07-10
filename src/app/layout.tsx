@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import BackgroundCanvas from "@/components/custom/Backgrounds/BackgroundCanvas";
+import Starfield from "@/components/custom/Backgrounds/Starfield";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 
@@ -38,11 +37,10 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-foreground text-background scroll-smooth px-4`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0a0a0f] text-[#e7e5e4]`}
       >
         <NextIntlClientProvider>
-          <BackgroundCanvas />
-          <Header />
+          <Starfield />
           {children}
         </NextIntlClientProvider>
       </body>

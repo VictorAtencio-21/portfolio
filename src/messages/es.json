@@ -1,94 +1,111 @@
 {
-  "navigation": {
-    "main": "INICIO",
-    "about": "SOBRE MÍ",
-    "stack": "MI STACK",
-    "projects": "PROYECTOS",
-    "experience": "EXPERIENCIA",
-    "contact": "CONTACTO",
-    "openMenu": "Abrir menú",
-    "closeMenu": "Cerrar menú",
-    "language": "Idioma"
+  "nav": {
+    "wordmark": "VICTOR ATENCIO",
+    "profile": "Perfil",
+    "toolkit": "Herramientas",
+    "work": "Trabajo",
+    "flightLog": "Bitácora",
+    "contact": "Contacto"
   },
-  "main": {
-    "greeting": "¡Hola! Soy Victor",
-    "introduction": "Desarrollador Full Stack apasionado por crear soluciones elegantes",
-    "hireMe": "Contrátame",
+  "hero": {
+    "eyebrow": "MARACAIBO → EL MUNDO",
+    "title": "Software que se siente\nsin esfuerzo.",
+    "subtitle": "Soy Victor — un desarrollador full-stack que dedica su tiempo a convertir problemas complejos en productos tranquilos y confiables. Tres años, tres plataformas lanzadas, cero drama.",
+    "startProject": "Iniciar un proyecto",
     "resume": "Currículum",
-    "resumeLanguage": "Idioma del Currículum",
+    "resumeLanguage": "IDIOMA DEL CV",
     "english": "Inglés",
     "spanish": "Español"
   },
-  "about": {
-    "intro": {
-      "title": "Permíteme presentarme",
-      "description": "Soy un desarrollador de software de Maracaibo, Venezuela, con más de 3 años de experiencia construyendo productos digitales limpios y amigables. Me encanta convertir problemas complejos en soluciones simples e intuitivas que faciliten la vida de las personas."
-    },
-    "passion": {
-      "title": "Mi Pasión por la Programación",
-      "description": "Realmente disfruto lo que hago. La programación no es solo mi trabajo, es mi forma favorita de aprender, crear y resolver problemas reales. Constantemente exploro nuevas tecnologías, supero mis límites y construyo cosas que importan. Siempre estoy en busca de nuevos desafíos y oportunidades para crecer."
-    },
-    "location": {
-      "title": "Remoto y Flexible",
-      "description": "Estoy ubicado en Maracaibo, Venezuela y abierto a oportunidades remotas en todo el mundo. Las zonas horarias no son un obstáculo, son solo un rompecabezas divertido."
-    }
-  },
-  "contact": {
-    "title": "Estoy aquí para ayudar",
-    "subtitle": "¿Tienes un proyecto en mente? ¡Podemos trabajar juntos para dar vida a tus ideas!",
-    "contactMe": "Contáctame",
-    "socialLinks": {
-      "github": "GitHub",
-      "linkedin": "LinkedIn",
-      "whatsapp": "WhatsApp"
-    },
-    "emailText": "No dudes en contactarme por correo electrónico en"
-  },
-  "projects": {
-    "title": "Proyectos destacados",
-    "subtitle": "Una selección de productos en los que he colaborado para lanzarlos y hacerlos crecer. Cada uno equilibra una experiencia cuidada con una ingeniería sólida para que los equipos sigan escalando con confianza.",
-    "visitProject": "Ver proyecto",
-    "comingSoon": "¡Próximamente!",
-    "items": [
+  "profile": {
+    "label": "01 — PERFIL",
+    "lead": "Ubicado en Maracaibo, Venezuela. Construyendo para equipos en cualquier lugar — las zonas horarias son un rompecabezas, no un obstáculo.",
+    "cards": [
       {
-        "id": "pulse",
-        "name": "Pulse",
-        "tagline": "Plataforma para entrenadores",
-        "description": "Pulse es una plataforma de gestión fitness creada con React Native y Expo que ofrece a los entrenadores un centro de control para planes, pagos y analíticas de progreso.",
-        "url": "https://pulsefit.app",
-        "highlights": [
-          "React Native y Expo",
-          "Paneles de progreso",
-          "Recordatorios automatizados de pago"
-        ]
+        "title": "Más de 3 años lanzando",
+        "body": "Productos limpios y fáciles de usar, del primer commit a producción."
       },
       {
-        "id": "slive",
-        "name": "SLIVE.AI",
-        "tagline": "Colaboración empresarial",
-        "description": "SLIVE.AI unifica operaciones ERP, colaboración social y una IA conversacional para orquestar personas, procesos y decisiones en tiempo real.",
-        "url": "https://slive.ai",
-        "highlights": [
-          "ERP + red social interna",
-          "Copilotos de IA conversacional",
-          "Automatización de flujos"
-        ]
+        "title": "Full stack, de verdad",
+        "body": "Cómodo siendo dueño de la interfaz, la API y todo lo que hay en medio."
       },
       {
-        "id": "burger",
-        "name": "Burger Smoke",
-        "tagline": "Menú y pedidos digitales",
-        "description": "Burger Smoke es una experiencia ligera de pedidos que transforma un menú web dinámico en solicitudes de takeout listas para WhatsApp para negocios locales ágiles.",
-        "url": "https://burgersmoke.vercel.app",
-        "highlights": [
-          "Actualizaciones del menú en tiempo real",
-          "Pedidos por WhatsApp",
-          "Optimizado para equipos pequeños"
-        ]
+        "title": "Remoto por diseño",
+        "body": "Hábitos async-first, escritura clara, entregas confiables."
       }
     ]
   },
-  "alt": {
-    "wavingHand": "Mano Saludando"
+  "toolkit": {
+    "label": "02 — HERRAMIENTAS",
+    "rows": [
+      {
+        "label": "FRONTEND",
+        "items": "React · Next.js · Angular · Tailwind CSS · Material UI · Framer Motion · Three.js"
+      },
+      {
+        "label": "MÓVIL",
+        "items": "React Native · Jetpack Compose · Ionic"
+      },
+      {
+        "label": "BACKEND",
+        "items": "Node.js · .NET · Express · Firebase · Prisma ORM · Socket.IO"
+      },
+      {
+        "label": "HERRAMIENTAS",
+        "items": "Git · Figma · Docker"
+      }
+    ]
+  },
+  "work": {
+    "label": "03 — TRABAJO DESTACADO",
+    "hint": "Pasa el cursor sobre un proyecto para ver de qué está hecho.",
+    "projects": [
+      {
+        "num": "01",
+        "name": "Pulse",
+        "tagline": "Sistema para coaching fitness",
+        "link": "pulsefit.app",
+        "url": "https://pulsefit.app",
+        "blurb": "Un centro de control para entrenadores — programas, pagos y progreso de clientes en una sola app de React Native. Hecho para que los coaches entrenen en lugar de perseguir hojas de cálculo.",
+        "highlights": ["React Native y Expo", "Paneles de progreso", "Pagos automatizados"]
+      },
+      {
+        "num": "02",
+        "name": "SLIVE.AI",
+        "tagline": "Colaboración empresarial",
+        "link": "slive.ai",
+        "url": "https://slive.ai",
+        "blurb": "Operaciones ERP, colaboración social e IA conversacional en un solo espacio — ayudando a las empresas a orquestar personas, procesos y decisiones en tiempo real.",
+        "highlights": ["ERP + red social", "Copilotos de IA", "Automatización de flujos"]
+      },
+      {
+        "num": "03",
+        "name": "Burger Smoke",
+        "tagline": "Menú y pedidos digitales",
+        "link": "burgersmoke.vercel.app",
+        "url": "https://burgersmoke.vercel.app",
+        "blurb": "Un menú web dinámico que se convierte en pedidos de takeout listos para WhatsApp. Ligero por diseño, hecho para cocinas locales ágiles.",
+        "highlights": ["Menú en tiempo real", "Enrutamiento a WhatsApp", "Ideal para equipos pequeños"]
+      }
+    ]
+  },
+  "flightLog": {
+    "label": "04 — BITÁCORA DE VUELO",
+    "items": [
+      { "role": "Desarrollador Full Stack", "company": "Melt Studio", "period": "DIC 2025 — AHORA" },
+      { "role": "Desarrollador de Software Senior", "company": "Bigwise", "period": "NOV 2023 — DIC 2025" },
+      { "role": "Desarrollador Full Stack", "company": "Devtop", "period": "ABR 2023 — NOV 2023" },
+      { "role": "Desarrollador Full Stack", "company": "CreaApps", "period": "AGO 2022 — MAY 2023" },
+      { "role": "Desarrollador Full Stack", "company": "Binwus", "period": "MAY 2022 — MAR 2023" }
+    ]
+  },
+  "contact": {
+    "label": "05 — CONTACTO",
+    "title": "Construyamos algo\ngrandioso, sin ruido.",
+    "email": "atenciomvictor@gmail.com",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "whatsapp": "WhatsApp",
+    "footer": "MARACAIBO, VE · 10.65° N, 71.65° W · © 2026"
   }
 }

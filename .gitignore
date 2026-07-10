@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Design deliverables (reference only, not app source)
+Portfolio space theme redesign/
