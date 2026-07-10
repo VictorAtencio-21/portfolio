@@ -1,94 +1,111 @@
 {
-  "navigation": {
-    "main": "HOME",
-    "about": "ABOUT ME",
-    "stack": "MY STACK",
-    "projects": "PROJECTS",
-    "experience": "EXPERIENCE",
-    "contact": "CONTACT",
-    "openMenu": "Open menu",
-    "closeMenu": "Close menu",
-    "language": "Language"
+  "nav": {
+    "wordmark": "VICTOR ATENCIO",
+    "profile": "Profile",
+    "toolkit": "Toolkit",
+    "work": "Work",
+    "flightLog": "Flight log",
+    "contact": "Contact"
   },
-  "main": {
-    "greeting": "Hi there, I'm Victor",
-    "introduction": "Passionate Full Stack Developer with a knack for crafting elegant solutions",
-    "hireMe": "Hire Me",
-    "resume": "Resume",
-    "resumeLanguage": "Resume Language",
+  "hero": {
+    "eyebrow": "MARACAIBO → EVERYWHERE",
+    "title": "Software that feels\neffortless.",
+    "subtitle": "I'm Victor — a full-stack developer who spends his time turning complex problems into calm, dependable products. Three years, three platforms shipped, zero drama.",
+    "startProject": "Start a project",
+    "resume": "Résumé",
+    "resumeLanguage": "RÉSUMÉ LANGUAGE",
     "english": "English",
-    "spanish": "Spanish"
+    "spanish": "Español"
   },
-  "about": {
-    "intro": {
-      "title": "Let me introduce myself",
-      "description": "I'm a software developer from Maracaibo, Venezuela with over 3 years of experience building clean, user-friendly digital products. I love turning complex problems into simple, intuitive solutions that make people's lives easier."
-    },
-    "passion": {
-      "title": "My Passion for Coding",
-      "description": "I genuinely enjoy what I do. Coding isn't just my job—it's my favorite way to learn, create, and solve real problems. I'm constantly exploring new tech, pushing my limits, and building things that matter. I'm always on the lookout for new challenges and opportunities to grow."
-    },
-    "location": {
-      "title": "Remote & Flexible",
-      "description": "I'm based in Maracaibo, Venezuela and open to remote opportunities worldwide. Time zones aren't a blocker—just a fun puzzle."
-    }
-  },
-  "contact": {
-    "title": "Here to Help",
-    "subtitle": "Have a project in mind? We can work together to bring your ideas to life!",
-    "contactMe": "Contact Me",
-    "socialLinks": {
-      "github": "GitHub",
-      "linkedin": "LinkedIn",
-      "whatsapp": "WhatsApp"
-    },
-    "emailText": "Feel free to reach out via email at"
-  },
-  "projects": {
-    "title": "Featured work",
-    "subtitle": "A selection of products I've helped launch and evolve. Each one balances thoughtful UX with resilient engineering so teams can keep scaling with confidence.",
-    "visitProject": "Visit project",
-    "comingSoon": "Coming soon!",
-    "items": [
+  "profile": {
+    "label": "01 — PROFILE",
+    "lead": "Based in Maracaibo, Venezuela. Building for teams everywhere — time zones are a puzzle, not a blocker.",
+    "cards": [
       {
-        "id": "pulse",
-        "name": "Pulse",
-        "tagline": "Fitness coaching OS",
-        "description": "Pulse is a fitness management platform built with React Native and Expo that gives trainers one command center for programs, payments, and client progress analytics.",
-        "url": "https://pulsefit.app",
-        "highlights": [
-          "React Native & Expo",
-          "Progress tracking dashboards",
-          "Automated payment reminders"
-        ]
+        "title": "3+ years shipping",
+        "body": "Clean, user-friendly products from first commit to production."
       },
       {
-        "id": "slive",
-        "name": "SLIVE.AI",
-        "tagline": "Enterprise collaboration",
-        "description": "SLIVE.AI unifies ERP operations, social collaboration, and conversational AI to help enterprises orchestrate their people, processes, and decisions in real time.",
-        "url": "https://slive.ai",
-        "highlights": [
-          "ERP + social workspace",
-          "Conversational AI copilots",
-          "Workflow automation"
-        ]
+        "title": "Full stack, honestly",
+        "body": "Comfortable owning the interface, the API, and everything between."
       },
       {
-        "id": "burger",
-        "name": "Burger Smoke",
-        "tagline": "Digital menu & ordering",
-        "description": "Burger Smoke is a lightweight ordering experience that turns a dynamic web menu into WhatsApp-ready takeout requests for fast-moving local businesses.",
-        "url": "https://burgersmoke.vercel.app",
-        "highlights": [
-          "Real-time menu updates",
-          "WhatsApp order routing",
-          "Optimized for small teams"
-        ]
+        "title": "Remote by design",
+        "body": "Async-first habits, clear writing, dependable delivery."
       }
     ]
   },
-  "alt": {
-    "wavingHand": "Waving Hand"
+  "toolkit": {
+    "label": "02 — TOOLKIT",
+    "rows": [
+      {
+        "label": "FRONTEND",
+        "items": "React · Next.js · Angular · Tailwind CSS · Material UI · Framer Motion · Three.js"
+      },
+      {
+        "label": "MOBILE",
+        "items": "React Native · Jetpack Compose · Ionic"
+      },
+      {
+        "label": "BACKEND",
+        "items": "Node.js · .NET · Express · Firebase · Prisma ORM · Socket.IO"
+      },
+      {
+        "label": "TOOLS",
+        "items": "Git · Figma · Docker"
+      }
+    ]
+  },
+  "work": {
+    "label": "03 — SELECTED WORK",
+    "hint": "Hover a project to see what it's made of.",
+    "projects": [
+      {
+        "num": "01",
+        "name": "Pulse",
+        "tagline": "Fitness coaching OS",
+        "link": "pulsefit.app",
+        "url": "https://pulsefit.app",
+        "blurb": "One command center for trainers — programs, payments, and client progress in a single React Native app. Built so coaches can coach instead of chase spreadsheets.",
+        "highlights": ["React Native & Expo", "Progress dashboards", "Automated payments"]
+      },
+      {
+        "num": "02",
+        "name": "SLIVE.AI",
+        "tagline": "Enterprise collaboration",
+        "link": "slive.ai",
+        "url": "https://slive.ai",
+        "blurb": "ERP operations, social collaboration, and conversational AI in one workspace — helping enterprises orchestrate people, processes, and decisions in real time.",
+        "highlights": ["ERP + social workspace", "AI copilots", "Workflow automation"]
+      },
+      {
+        "num": "03",
+        "name": "Burger Smoke",
+        "tagline": "Digital menu & ordering",
+        "link": "burgersmoke.vercel.app",
+        "url": "https://burgersmoke.vercel.app",
+        "blurb": "A dynamic web menu that turns into WhatsApp-ready takeout orders. Lightweight by design, built for fast-moving local kitchens.",
+        "highlights": ["Real-time menu", "WhatsApp routing", "Small-team friendly"]
+      }
+    ]
+  },
+  "flightLog": {
+    "label": "04 — FLIGHT LOG",
+    "items": [
+      { "role": "Full Stack Developer", "company": "Melt Studio", "period": "DEC 2025 — NOW" },
+      { "role": "Senior Software Developer", "company": "Bigwise", "period": "NOV 2023 — DEC 2025" },
+      { "role": "Full Stack Developer", "company": "Devtop", "period": "APR 2023 — NOV 2023" },
+      { "role": "Full Stack Developer", "company": "CreaApps", "period": "AUG 2022 — MAY 2023" },
+      { "role": "Full Stack Developer", "company": "Binwus", "period": "MAY 2022 — MAR 2023" }
+    ]
+  },
+  "contact": {
+    "label": "05 — CONTACT",
+    "title": "Let's build something\nquietly great.",
+    "email": "atenciomvictor@gmail.com",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "whatsapp": "WhatsApp",
+    "footer": "MARACAIBO, VE · 10.65° N, 71.65° W · © 2026"
   }
 }
