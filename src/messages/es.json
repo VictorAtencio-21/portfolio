@@ -10,7 +10,7 @@
   "hero": {
     "eyebrow": "MARACAIBO → EL MUNDO",
     "title": "Software que se siente\nsin esfuerzo.",
-    "subtitle": "Soy Victor — un desarrollador full-stack que dedica su tiempo a convertir problemas complejos en productos tranquilos y confiables. Tres años, tres plataformas lanzadas, cero drama.",
+    "subtitle": "Soy Victor — un desarrollador full-stack que dedica su tiempo a convertir problemas complejos en productos tranquilos y confiables. Lanzados a producción, cero drama.",
     "startProject": "Iniciar un proyecto",
     "resume": "Currículum",
     "resumeLanguage": "IDIOMA DEL CV",
@@ -48,7 +48,7 @@
       },
       {
         "label": "BACKEND",
-        "items": "Node.js · .NET · Express · Firebase · Prisma ORM · Socket.IO"
+        "items": "Node.js · NestJS · .NET · Express · Firebase · PostgreSQL · Redis · Prisma ORM · Socket.IO"
       },
       {
         "label": "HERRAMIENTAS",
@@ -62,6 +62,15 @@
     "projects": [
       {
         "num": "01",
+        "name": "Red Acopio Venezuela",
+        "tagline": "Logística de ayuda de emergencia",
+        "link": "redacopiovnzla.com",
+        "url": "https://www.redacopiovnzla.com/",
+        "blurb": "Un mapa en vivo de centros de acopio y lo que cada uno necesita ahora mismo — donaciones entregadas por QR e inventario donde cada movimiento queda registrado en vez de editarse en silencio. Hecho para que la ayuda llegue donde de verdad hace falta.",
+        "highlights": ["Next.js y NestJS", "Entregas por QR, auditadas", "Búsqueda geo + caché Redis"]
+      },
+      {
+        "num": "02",
         "name": "Pulse",
         "tagline": "Sistema para coaching fitness",
         "link": "pulsefit.app",
@@ -70,7 +79,7 @@
         "highlights": ["React Native y Expo", "Paneles de progreso", "Pagos automatizados"]
       },
       {
-        "num": "02",
+        "num": "03",
         "name": "SLIVE.AI",
         "tagline": "Colaboración empresarial",
         "link": "slive.ai",
@@ -79,7 +88,7 @@
         "highlights": ["ERP + red social", "Copilotos de IA", "Automatización de flujos"]
       },
       {
-        "num": "03",
+        "num": "04",
         "name": "Burger Smoke",
         "tagline": "Menú y pedidos digitales",
         "link": "burgersmoke.vercel.app",
