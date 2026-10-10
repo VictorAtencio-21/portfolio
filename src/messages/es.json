@@ -22,7 +22,7 @@
     "lead": "Ubicado en Maracaibo, Venezuela. Construyendo para equipos en cualquier lugar — las zonas horarias son un rompecabezas, no un obstáculo.",
     "cards": [
       {
-        "title": "Más de 3 años lanzando",
+        "title": "Más de 4 años lanzando",
         "body": "Productos limpios y fáciles de usar, del primer commit a producción."
       },
       {
@@ -53,6 +53,10 @@
       {
         "label": "HERRAMIENTAS",
         "items": "Git · Figma · Docker"
+      },
+      {
+        "label": "IA E INTEGRACIONES",
+        "items": "Python · Integraciones con LLM · MLflow · Zapier · APIs REST"
       }
     ]
   },
@@ -93,8 +97,8 @@
         "tagline": "Menú y pedidos digitales",
         "link": "burgersmoke.vercel.app",
         "url": "https://burgersmoke.vercel.app",
-        "blurb": "Un menú web dinámico que se convierte en pedidos de takeout listos para WhatsApp. Ligero por diseño, hecho para cocinas locales ágiles.",
-        "highlights": ["Menú en tiempo real", "Enrutamiento a WhatsApp", "Ideal para equipos pequeños"]
+        "blurb": "Un menú web dinámico que se convierte en pedidos listos para WhatsApp, con reservas de mesas, inventario, panel de administración y pantalla de cocina (KDS). Pensado para cocinas locales que se mueven rápido.",
+        "highlights": ["Menú en tiempo real", "Enrutamiento a WhatsApp", "Reservas y KDS"]
       }
     ]
   },

@@ -22,7 +22,7 @@
     "lead": "Based in Maracaibo, Venezuela. Building for teams everywhere — time zones are a puzzle, not a blocker.",
     "cards": [
       {
-        "title": "3+ years shipping",
+        "title": "4+ years shipping",
         "body": "Clean, user-friendly products from first commit to production."
       },
       {
@@ -53,6 +53,10 @@
       {
         "label": "TOOLS",
         "items": "Git · Figma · Docker"
+      },
+      {
+        "label": "AI & INTEGRATIONS",
+        "items": "Python · LLM integrations · MLflow · Zapier · REST APIs"
       }
     ]
   },
@@ -93,8 +97,8 @@
         "tagline": "Digital menu & ordering",
         "link": "burgersmoke.vercel.app",
         "url": "https://burgersmoke.vercel.app",
-        "blurb": "A dynamic web menu that turns into WhatsApp-ready takeout orders. Lightweight by design, built for fast-moving local kitchens.",
-        "highlights": ["Real-time menu", "WhatsApp routing", "Small-team friendly"]
+        "blurb": "A dynamic web menu that turns into WhatsApp-ready orders, backed by table reservations, inventory, an admin panel, and a kitchen display (KDS). Built for fast-moving local kitchens.",
+        "highlights": ["Real-time menu", "WhatsApp routing", "Reservations & KDS"]
       }
     ]
   },
